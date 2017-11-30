@@ -40,3 +40,7 @@ $("#search").on("click", function() {
 	})  //done function
 
 })  //on click
+
+$('#clear').on("click", function() {
+	$('#results').empty();
+})
