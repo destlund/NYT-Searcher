@@ -29,6 +29,17 @@ $("#search").on("click", function() {
 		var results = res.response.docs;
 		console.log("results: " + results);
 
+		for (var i = 0; i < results.length; i++) {
+			var numbering = i + 1;
+			console.log("Number: " + numbering);
+			var headline = results[i].headline.main;
+			console.log("headline: " + headline);
+			var author = results[i].byline.orignal;
+			console.log("author: " + author);
+			var numbering = i + 1;
+			console.log("Number: " + numbering);
+			
+		} //for loop
 
 
 
@@ -40,7 +51,3 @@ $("#search").on("click", function() {
 	})  //done function
 
 })  //on click
-
-$('#clear').on("click", function() {
-	$('#results').empty();
-})
