@@ -38,6 +38,11 @@ $("#search").on("click", function() {
 			console.log("author: " + author);
 			var numbering = i + 1;
 			console.log("Number: " + numbering);
+
+
+			var p = $("<p>").text(numbering + headline + author);
+
+			$("#results").append(p);
 			
 		} //for loop
 
