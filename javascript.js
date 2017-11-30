@@ -8,20 +8,18 @@ $("#search").on("click", function() {
 	term = $("#searchTerm").val().trim();
 	console.log("search term: " + term);
 
+	numResults = $("#numberOfRecords").val().trim();
+	console.log("Number of results: " + numResults);
 
 	if ($("#startYear").val() > 0) {
 		startDate = $("#startYear").val().trim() + "0101";
 		console.log("Start Date: " + startDate);
-	} else {
-		//nothing
-	}
+	};
 
 	if ($("#endYear").val() > 0) {
 		endDate = $("#endYear").val().trim() + "0101";
 		console.log("End Date: " + endDate);
-	} else {
-		//nothing
-	}
+	};
 
 
 	var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=" + 
