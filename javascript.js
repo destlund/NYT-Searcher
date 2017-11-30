@@ -8,11 +8,21 @@ $("#search").on("click", function() {
 	term = $("#searchTerm").val().trim();
 	console.log("search term: " + term);
 
-	startDate = $("#startYear").val().trim() + "0101";
-	console.log("Start Date: " + startDate);
 
-	endDate = $("#endYear").val().trim() + "1231";
-	console.log("End Date: " + endDate);
+	if ($("#startYear").val() > 0) {
+		startDate = $("#startYear").val().trim() + "0101";
+		console.log("Start Date: " + startDate);
+	} else {
+		//nothing
+	}
+
+	if ($("#endYear").val() > 0) {
+		endDate = $("#endYear").val().trim() + "0101";
+		console.log("End Date: " + endDate);
+	} else {
+		//nothing
+	}
+
 
 	var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=" + 
 		term + "&api_key=1e1716fb78ac45f7b3268681435313f3&begin_date=" + 
